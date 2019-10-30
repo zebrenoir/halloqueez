@@ -5,7 +5,6 @@
     src: url('../fonts/who_asks_satan.ttf');
 }
 
-
 body{
     background-image:url("/src/image/death-164761.jpg") ;
     background-attachment: fixed;
@@ -13,7 +12,6 @@ body{
     background-position: top !important;
     background-size: cover !important;
 }
-
 
 h1 {
     font-family: 'Indie Flower', cursive;
