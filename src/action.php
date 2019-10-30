@@ -7,4 +7,7 @@ if (!empty($_POST)) {
     if ($step < 10) {
         $step += 1;
     }
+    else {
+        header('location: ranking.php');
+    }
 }
