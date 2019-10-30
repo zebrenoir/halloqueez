@@ -1,3 +1,5 @@
+// ce fichier permet est la zone données php de la page niveau.php
+
 <?php
 function hidden1()
 {
