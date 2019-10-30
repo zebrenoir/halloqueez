@@ -1,0 +1,6 @@
+/* --------- HOME / LOGIN PAGE ------------*/
+
+.container-fluid{
+    background-image: url("/../image/saw_home.jpg");
+    max-height: 100vh;
+}
