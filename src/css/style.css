@@ -87,3 +87,57 @@ START RANKING PAGE STYLE
 /*
 END RANKING PAGE STYLE
 */
+
+
+/* --------- HOME / LOGIN PAGE ------------*/
+.titleHome {
+    color: #500100;
+    font-size: 150px;
+}
+
+.container-fluid {
+    background-image: url("/src/image/SAW.jpg");
+    background-size: cover;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form {
+    margin-bottom: 40px;
+    width: 250px;
+    text-align: center;
+    align-self: center;
+}
+
+.form-group {
+    color: #9C9285;
+    background-color: #070707;
+    border: #070707 solid 2px;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    height: 50px;
+    width : 250px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.monster{
+    padding-bottom: 202px;
+}
+
+#username{
+    font-size: 2em;
+}
+
+.btn-secondary{
+    width: 200px;
+    height: 50px;
+    font-size: 1.1em;
+    background-color: #2C292F;
+}
