@@ -24,6 +24,5 @@ require_once "phpNiveau.php";
 
 
 
-</body>
-</html>
+<?php require_once "footer.html"?>
 
