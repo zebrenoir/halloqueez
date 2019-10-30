@@ -1,0 +1,12 @@
+{
+    "name": "sierradelta/halloqueez",
+    "authors": [
+        {
+            "name": "Sofiane Daouzli",
+            "email": "sofianesk8@hotmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-client": "^4.3"
+    }
+}
