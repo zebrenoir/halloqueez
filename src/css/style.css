@@ -1,11 +1,6 @@
 /* partie des niveaux********************************/
 
-@font-face {
-    font-family: "Who asks Satan";
-    src: url('../fonts/who_asks_satan.ttf');
-}
-
-body{
+.body_niveau{
     background-image:url("/src/image/death-164761.jpg") ;
     background-attachment: fixed;
     background-repeat: no-reapet !important;
@@ -13,7 +8,7 @@ body{
     background-size: cover !important;
 }
 
-h1 {
+.title_pageNiveau {
     font-family: 'Indie Flower', cursive;
     color:white;
 }
@@ -52,3 +47,43 @@ h1 {
     color:white;
 }
 /*** fin de la partier page niveau**/
+
+
+/*
+START RANKING PAGE STYLE
+*/
+
+.ranking {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+.ranking_podium {
+}
+
+.ranking_title {
+    font-family: "Who asks Satan", sans-serif;
+    color: red;
+    font-size: 4rem;
+    text-align: center;
+    padding: 30px;
+}
+
+.ranking_table {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ranking img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+}
+
+/*
+END RANKING PAGE STYLE
+*/

@@ -5,8 +5,9 @@ require_once "../connec.php";
 require_once "phpNiveau.php";
 
 ?>
-<h1> level</h1>
-<p></p>
+<body class="body_niveau">
+<h1 class="title_pageNiveau"> level</h1>
+
 <ul class="levels">
     <li class="lvl">
         <a <?php echo hiddenLien1() ?> class="number">1</a>
@@ -22,7 +23,7 @@ require_once "phpNiveau.php";
 
 </ul>
 
-
+</body>
 
 <?php require_once "footer.html"?>
 
