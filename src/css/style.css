@@ -4,6 +4,8 @@
     font-family: "Who asks Satan";
     src: url('../fonts/who_asks_satan.ttf');
 }
+
+
 body{
     background-image:url("/src/image/death-164761.jpg") ;
     background-attachment: fixed;
@@ -20,8 +22,6 @@ h1 {
 
 .levels{
     display: flex;
-
-
 }
 
 .lvl{
@@ -47,5 +47,10 @@ h1 {
     width:25px ;
     margin-left: 30px;
     margin-top: 35px;
+}
+
+.number{
+    text-decoration:none;
+    color:white;
 }
 /*** fin de la partier page niveau**/
