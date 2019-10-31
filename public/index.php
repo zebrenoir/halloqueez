@@ -2,14 +2,10 @@
 require_once 'header.php';
 require_once '../vendor/autoload.php';
 require_once '../connec2.php';
-
 $pdo = new \PDO(DSN, USER, PASS);
-
 use Symfony\Component\HttpClient\HttpClient;
-
 $client = HttpClient::create();
 $response = $client->request('GET', 'https://hackathon-wild-hackoween.herokuapp.com/monsters');
-
 $statusCode = $response->getStatusCode();
 // $statusCode = 200
 $contentType = $response->getHeaders()['content-type'][0];
@@ -18,14 +14,11 @@ $content = $response->getContent();
 // $content = '{"id":521583, "name":"symfony-docs", ...}'
 $content = $response->toArray();
 // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-
-
-if (!empty($_POST) && isset($_POST['submit'])) {
-    $_SESSION['firstname'] = $_POST['submit'];
+if (!empty($_POST) && isset($_POST['username'])) {
+    $_SESSION['username'] = $_POST['username'];
     $errors = [];
     $username = $_POST["username"];
     $monster = $_POST["monster"];
-
     // Verification
     if (empty(trim($username))) {
         $errors["username"] = "Please fill your username";
@@ -33,18 +26,14 @@ if (!empty($_POST) && isset($_POST['submit'])) {
     if (empty(trim($monster))) {
         $errors["monster"] = "Please choice your monster";
     }
-
-
     if (empty($errors)) {
         //Verify user
         $query = 'SELECT username FROM user WHERE username = :username';
         $statement = $pdo->prepare($query);
         $statement->bindValue(':username', $username, \PDO::PARAM_STR);
-
         //insertion
         $statement->execute();
         $blog = $statement->fetchAll();
-
         if(!empty($blog)) {
             header("location:niveau.php");
         } elseif (empty($blog)){
@@ -55,7 +44,6 @@ if (!empty($_POST) && isset($_POST['submit'])) {
             $statement = $pdo->prepare($query);
             $statement->bindValue(':username', $username, \PDO::PARAM_STR);
             $statement->bindValue(':monster', $monster, \PDO::PARAM_STR);
-
             //insertion
             $statement->execute();
             $blog = $statement->fetchAll();
@@ -64,31 +52,31 @@ if (!empty($_POST) && isset($_POST['submit'])) {
     }
 }
 ?>
-
-<div class="container-fluid">
-    <h1 class="titleHome">Trick or Game</h1>
-    <div class="form">
-        <form method="post" action="">
-            <input id="username" name="username" type="text" placeholder="Username" class="form-group" required>
-            <img id="selectImage"/>
-            <select class="form-group" id="select" onchange="change();" name="monster">
-                <option>
-                    Choose your monster...
-                </option>
-                <option style="background:url(<?= $content['monsters'][9]['picture'] ?>) no-repeat;"
-                        value="<?= $content['monsters'][9]['name'] ?>"  ><?= $content['monsters'][9]['name'] ?></option>
-                <option style="background:url(<?= $content['monsters'][6]['picture'] ?>) no-repeat;"
-                        value="<?= $content['monsters'][6]['name'] ?>"><?= $content['monsters'][6]['name'] ?></option>
-                <option style="background:url(<?= $content['monsters'][5]['picture'] ?>) no-repeat;"
-                        value="<?= $content['monsters'][5]['name'] ?>"><?= $content['monsters'][5]['name'] ?></option>
-                <option style="background:url(<?= $content['monsters'][7]['picture'] ?>) no-repeat;"
-                        value="<?= $content['monsters'][7]['name'] ?>"><?= $content['monsters'][7]['name'] ?></option>
-            </select>
-            <button type="submit" name="submit" class="btn btn-secondary">Let the party begin...</button>
-        </form>
+    <body>
+    <div class="container-fluid index">
+        <h1 class="titleHome">Trick or Game</h1>
+        <div class="form">
+            <form method="post" action="">
+                <input id="username" name="username" type="text" placeholder="Username" class="form-group" required>
+                <img id="selectImage"/>
+                <select class="form-group" id="select" onchange="change();" name="monster">
+                    <option>
+                        Choose your monster...
+                    </option>
+                    <option style="background:url(<?= $content['monsters'][9]['picture'] ?>) no-repeat;"
+                            value="<?= $content['monsters'][9]['name'] ?>"  ><?= $content['monsters'][9]['name'] ?></option>
+                    <option style="background:url(<?= $content['monsters'][6]['picture'] ?>) no-repeat;"
+                            value="<?= $content['monsters'][6]['name'] ?>"><?= $content['monsters'][6]['name'] ?></option>
+                    <option style="background:url(<?= $content['monsters'][5]['picture'] ?>) no-repeat;"
+                            value="<?= $content['monsters'][5]['name'] ?>"><?= $content['monsters'][5]['name'] ?></option>
+                    <option style="background:url(<?= $content['monsters'][7]['picture'] ?>) no-repeat;"
+                            value="<?= $content['monsters'][7]['name'] ?>"><?= $content['monsters'][7]['name'] ?></option>
+                </select>
+                <button type="submit" name="submit" class="btn btn-secondary">Let the party begin...</button>
+            </form>
+        </div>
     </div>
-</div>
-</body>
+    </body>
 
 <?php
 require_once 'footer.html'; ?>
