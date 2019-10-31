@@ -63,7 +63,7 @@ foreach ($users as $key => $user) {
                 $points = $user['level1'] + $user['level2'];
                 ?>
                 <tr>
-                    <th scope="row"><?= $rank ?></th>
+                    <th scope="row">#<?= $rank ?></th>
                     <td><?= $user['username'] ?></td>
                     <td><img src="<?= $user['monster'] ?>" alt="avatar"></td>
                     <td><?= $user['points'] ?></td>
