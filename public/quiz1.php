@@ -1,6 +1,6 @@
 <?php
 
-require 'header.html';
+require 'header.php';
 
 require '../src/action.php';
 
@@ -22,13 +22,15 @@ $content = $response->toArray();
 var_dump($goodAnswer);
 ?>
 
+<body>
+<div class="container-fluid quiz1">
 <form method="post">
     <?php if ($step == 1) { ?>
-        <div>
+        <div class="firstForm">
             <img src="<?= $content['movies'][3]['posterUrl'] ?>" alt="scream2">
         </div>
         <div>
-            <p>What is the release year of this movie ?</p>
+            <p class="titleForm">What is the release year of this movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q" id="q1-a1" value="<?= $content['movies'][3]['year'] ?>">
@@ -56,11 +58,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 2) { ?>
-        <div>
+        <div class="firstForm">
             <img src="<?= $content['movies'][67]['posterUrl'] ?>" alt="Night_of_the_Living_Dead">
         </div>
         <div>
-            <p>Who is the director of this movie ?</p>
+            <p class="titleForm">Who is the director of this movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q2" id="q2-a1">
@@ -88,11 +90,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 3) { ?>
-        <div>
+        <div class="firstForm">
             <img src="<?= $content['movies'][80]['posterUrl'] ?>" alt="28_Weeks_Later...">
         </div>
         <div>
-            <p>What is the country of production of this movie ?</p>
+            <p class="titleForm">What is the country of production of this movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q3" id="q3-a1">
@@ -120,12 +122,14 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 4) { ?>
+  <div class="firstForm">
         <audio src="../src/sound1.mp3" controls>
             Your browser does not support the
             <code>audio</code> element.
         </audio>
+  </div>
         <div>
-            <p>Movie ?</p>
+            <p class="titleForm">Movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q4" id="q4-a1">
@@ -153,11 +157,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 5) { ?>
-        <div>
+        <div class="firstForm">
             <img src="http://giphygifs.s3.amazonaws.com/media/mphIpEZf54wko/giphy.gif" alt="">
         </div>
         <div>
-            <p>Movie ?</p>
+            <p class="titleForm">Movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q5" id="q5-a1">
@@ -185,11 +189,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 6) { ?>
-        <div>
+        <div class="firstForm">
             <img src="<?= $content['movies'][33]['posterUrl'] ?>" alt="28_Weeks_Later...">
         </div>
         <div>
-            <p>What is the release year of this movie ?</p>
+            <p class="titleForm">What is the release year of this movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q6" id="q6-a1>
@@ -217,11 +221,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 7) { ?>
-        <div>
+        <div class="firstForm">
             <img src="<?= $content['movies'][50]['posterUrl'] ?>" alt="">
         </div>
         <div>
-            <p>What is the country of production of this movie ?</p>
+            <p class="titleForm">What is the country of production of this movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q7" id="q7-a1">
@@ -249,11 +253,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 8) { ?>
-        <div>
+        <div class="firstForm">
             <audio controls src="../src/sound2.mp3"></audio>
         </div>
         <div>
-            <p>Movie ?</p>
+            <p class="titleForm">Movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q8" id="q8-a1">
@@ -281,11 +285,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 9) { ?>
-        <div>
+        <div class="firstForm">
             <img src="https://media.giphy.com/media/JfNbCyMCB4txu/giphy.gif" alt="">
         </div>
         <div>
-            <p>Movie ?</p>
+            <p class="titleForm">Movie ?</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q" id="q9-a1" value="<?= $content['movies'][74]['title'] ?>">
@@ -313,8 +317,11 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 10) { ?>
+        <div class="firstForm">
+                              
+                              </div>
         <div>
-            <p>Question 10</p>
+            <p class="titleForm">Question 10</p>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="q10" id="q10-a1" value="option1">
@@ -345,9 +352,10 @@ var_dump($goodAnswer);
     <input type='hidden' name="step" value="<?= $step ?>"/>
     <input type="hidden" name="goodAnswer" value="<?= $goodAnswer ?>"/>
 
-    <button type="submit" class="btn btn-primary">Next</button>
-</form>
-
+        <button type="submit" class="btn btn-secondary">Next</button>
+    </form>
+</div>
+</body>
 <?php
 
 require 'footer.html';

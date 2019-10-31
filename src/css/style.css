@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Who asks Satan";
+    src: url("../fonts/who_asks_satan.ttf") format("truetype");
+}
+
+/* partie des niveaux********************************/
+
+.body_niveau{
+    background-image:url("/src/image/death-164761.jpg") ;
+    background-attachment: fixed;
+    background-repeat: no-reapet !important;
+    background-position: top !important;
+    background-size: cover !important;
+}
+
+.title_pageNiveau {
+    font-family: 'Indie Flower', cursive;
+    color:white;
+}
+
+.levels{
+    display: flex;
+}
+
+.lvl{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20%;
+    background:transparent;
+    border-radius:50%;
+    width:110px;
+    height:110px;
+    border:2px solid white;
+    color: white;
+    border-right-width: 34px;
+    font-family: "Who asks Satan";
+    font-size: 4em;
+}
+.number{
+
+    margin-left: 22px;
+}
+.lock{
+    height: 25px;
+    width:25px ;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.number{
+    text-decoration:none;
+    color:white;
+}
+/*** fin de la partier page niveau**/
+
+
+/*
+START RANKING PAGE STYLE
+*/
+
+.ranking {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+.ranking_podium {
+}
+
+.ranking_title {
+    font-family: "Who asks Satan", sans-serif;
+    color: red;
+    font-size: 4rem;
+    text-align: center;
+    padding: 30px;
+}
+
+.ranking_table {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ranking img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+}
+
+/*
+END RANKING PAGE STYLE
+*/
+
+
+/* --------- HOME / LOGIN PAGE ------------*/
+.titleHome {
+    font-family: "Who asks Satan";
+    color: #500100;
+    font-size: 200px;
+}
+
+.index{
+    background-image: url("/src/image/SAW.jpg");
+    background-size: cover;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form {
+    margin-bottom: 40px;
+    width: 250px;
+    text-align: center;
+    align-self: center;
+}
+
+.form-group {
+    color: #9C9285;
+    background-color: #070707;
+    border: #070707 solid 2px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 50px;
+    width : 250px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.monster{
+    padding-bottom: 202px;
+}
+
+#username{
+    font-size: 2em;
+}
+
+#selectImage{
+    width : 250px;
+    height : 376px;
+    border: solid black 5px;
+    background-image:url("/../src/image/death-164761.jpg") ;
+    background-position: top;
+    background-size: cover;
+}
+
+.btn-secondary{
+    width: 200px;
+    height: 50px;
+    font-size: 1.1em;
+    background-color: #2C292F;
+}
+
+/*---------------QUIZ1------------------*/
+
+.quiz1{
+    background-image: url("/src/image/bg_quiz1.jpg");
+    background-size: cover;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.formQuiz{
+    min-width : 500px;
+    min-height: 500px;
+    background-color: black;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+;
+}
+
+audio{
+    align-self: center;
+}
+
+.firstForm{
+    margin: 30px auto;
+}
+
+.form-check{
+    align-self: flex-start;
+    margin-left : 30%;
+}
+
+.form-check-input{
+    position: relative;
+}
+
+.formQuiz button{
+    align-self: center;
+    width: 200px;
+    margin: 30px auto;
+    height: auto;
+}
+
+.titleForm{
+    font-family: 'Who asks Satan', cursive;
+    font-size: 3em;
+    color: #500100;
+}
