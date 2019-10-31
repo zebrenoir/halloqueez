@@ -46,7 +46,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
         $blog = $statement->fetchAll();
 
         if(!empty($blog)) {
-            header("location: public/niveau.php");
+            header("location: niveau.php");
         } elseif (empty($blog)){
             $username = $_POST["username"];
             $monster = $_POST["monster"];
