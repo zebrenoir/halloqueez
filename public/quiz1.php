@@ -120,7 +120,7 @@ var_dump($goodAnswer);
         </div>
     <?php } ?>
     <?php if ($step == 4) { ?>
-        <audio src="../src/scream.mp3" controls>
+        <audio src="../src/sound1.mp3" controls>
             Your browser does not support the
             <code>audio</code> element.
         </audio>
@@ -186,65 +186,71 @@ var_dump($goodAnswer);
     <?php } ?>
     <?php if ($step == 6) { ?>
         <div>
-            <p>Question</p>
+            <img src="<?= $content['movies'][33]['posterUrl'] ?>" alt="28_Weeks_Later...">
+        </div>
+        <div>
+            <p>What is the release year of this movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q6" id="q6-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q6" id="q6-a1>
             <label class="form-check-label" for="q6-a1">
-                Option 1
+            <?= $content['movies'][1]['year'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q6" id="q6-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q" id="q6-a2" value="<?= $content['movies'][33]['year'] ?>">
             <label class="form-check-label" for="q6-a2">
-                Option 2
+                <?= $content['movies'][33]['year'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q6" id="q6-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q6" id="q6-a3">
             <label class="form-check-label" for="q6-a3">
-                Option 3
+                <?= $content['movies'][5]['year'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q6" id="q6-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q6" id="q6-a4">
             <label class="form-check-label" for="q6-a4">
-                Option 4
+                <?= $content['movies'][6]['year'] ?>
             </label>
         </div>
     <?php } ?>
     <?php if ($step == 7) { ?>
         <div>
-            <p>Question 7</p>
+            <img src="<?= $content['movies'][50]['posterUrl'] ?>" alt="">
+        </div>
+        <div>
+            <p>What is the country of production of this movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q7" id="q7-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q7" id="q7-a1">
             <label class="form-check-label" for="q7-a1">
-                Option 1
+                <?= $content['movies'][7]['country'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q7" id="q7-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q7" id="q7-a2">
             <label class="form-check-label" for="q7-a2">
-                Option 2
+                <?= $content['movies'][48]['country'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q7" id="q7-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q" id="q7-a3" value="<?= $content['movies'][50]['country'] ?>">
             <label class="form-check-label" for="q7-a3">
-                Option 3
+                <?= $content['movies'][50]['country'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q7" id="q7-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q7" id="q7-a4">
             <label class="form-check-label" for="q7-a4">
-                Option 4
+                <?= $content['movies'][47]['country'] ?>
             </label>
         </div>
     <?php } ?>
     <?php if ($step == 8) { ?>
         <div>
-            <audio controls src="src/sound2.mp3"></audio>
+            <audio controls src="../src/sound2.mp3"></audio>
         </div>
         <div>
             <p>Movie ?</p>
