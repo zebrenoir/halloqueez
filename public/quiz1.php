@@ -30,7 +30,7 @@ $content = $response->toArray();
             <img src="<?= $content['movies'][3]['posterUrl'] ?>" alt="scream2">
         </div>
         <div>
-            <p class="titleForm">What is the release year of this movie ?</p>
+            <p class="titleForm">What is the release year?</p>
         </div>
         <div class="btnRadio">
             <div class="form-check">
@@ -65,7 +65,7 @@ $content = $response->toArray();
         <img src="<?= $content['movies'][67]['posterUrl'] ?>" alt="Night_of_the_Living_Dead">
     </div>
     <div>
-        <p class="titleForm">Who is the director of this movie ?</p>
+        <p class="titleForm">Who is the director?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -100,7 +100,7 @@ $content = $response->toArray();
         <img src="<?= $content['movies'][80]['posterUrl'] ?>" alt="28_Weeks_Later...">
     </div>
     <div>
-        <p class="titleForm">What is the country of production of this movie ?</p>
+        <p class="titleForm">What is the country of production?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -206,7 +206,7 @@ $content = $response->toArray();
         <img src="<?= $content['movies'][33]['posterUrl'] ?>" alt="28_Weeks_Later...">
     </div>
     <div>
-        <p class="titleForm">What is the release year of this movie ?</p>
+        <p class="titleForm">What is the release year?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -240,7 +240,7 @@ $content = $response->toArray();
         <img src="<?= $content['movies'][50]['posterUrl'] ?>" alt="">
     </div>
     <div>
-        <p class="titleForm">What is the country of production of this movie ?</p>
+        <p class="titleForm">What is the country of production?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
