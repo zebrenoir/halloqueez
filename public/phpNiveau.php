@@ -1,6 +1,26 @@
-// ce fichier permet est la zone données php de la page niveau.php
-
 <?php
+
+
+$pdo = new PDO(DSN, USER, PASS);
+
+
+$resultats = $pdo->prepare("INSERT INTO user (username, monster) VALUES (:username, :monster)");
+
+
+$username = trim($_POST['username']);
+$monster = trim($_POST['monster']);
+
+$username=htmlspecialchars($username);
+$monster=htmlspecialchars($monster);
+
+
+$resultats->bindValue(':username', $username, \PDO::PARAM_STR);
+$resultats->bindValue(':monster', $monster, \PDO::PARAM_STR);
+
+$resultats->execute();
+
+
+
 function hidden1()
 {
     $pdo = new PDO(DSN, USER, PASS);
@@ -10,8 +30,8 @@ function hidden1()
     $results = $statement->fetchAll();
 
     foreach ($results as $result) {
-        if ($result['username'] == 'Dark Nun') {
-            if ($result['level1'] >= 7) {
+        if ($result['username'] == $_POST['username']) {
+            if ($result['level1'] <= 10) {
                 return 'style="visibility: hidden;"';
             }
         }
@@ -27,8 +47,8 @@ function hidden2()
     $results = $statement->fetchAll();
 
     foreach ($results as $result) {
-        if ($result['username'] == 'Dark Nun') {
-            if ($result['level2'] >= 7) {
+        if ($result['username'] == $_POST['username']) {
+            if ($result['level1'] >= 7) {
                 return 'style="visibility: hidden;"';
             }
         }
@@ -48,3 +68,5 @@ function hiddenLien2(){
         return 'href="#"';
     }
 }
+
+

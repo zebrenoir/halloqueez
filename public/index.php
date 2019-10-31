@@ -59,7 +59,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
             //insertion
             $statement->execute();
             $blog = $statement->fetchAll();
-            header("location:/niveau.php");
+            header("location:niveau.php");
         }
     }
 }
@@ -68,7 +68,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
 <div class="container-fluid">
     <h1 class="titleHome">Trick or Game</h1>
     <div class="form">
-        <form method="post" action="#">
+        <form method="post" action="niveau.php">
             <input id="username" name="username" type="text" placeholder="Username" class="form-group">
             <img id="selectImage"style="width : 100px; height : 100px"/>
             <select class="form-group" id="select" onchange="change();" name="monster">

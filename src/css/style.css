@@ -1,5 +1,8 @@
 /* partie des niveaux********************************/
-
+@font-face {
+    font-family: "Who asks Satan";
+    src: url("../fonts/who_asks_satan.ttf") format("truetype");
+}
 .body_niveau{
     background-image:url("/src/image/death-164761.jpg") ;
     background-attachment: fixed;

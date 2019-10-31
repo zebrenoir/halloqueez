@@ -3,7 +3,7 @@
 
 require_once "../connec.php";
 require_once "phpNiveau.php";
-
+var_dump($_POST['username']);
 ?>
 <body class="body_niveau">
 <h1 class="title_pageNiveau"> level</h1>
