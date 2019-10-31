@@ -1,11 +1,13 @@
 <?php
-require_once 'header.html';
+
+require_once 'header.php';
 require_once '../connec2.php';
 require_once '../vendor/autoload.php';
 
 use Symfony\Component\HttpClient\HttpClient;
 
 // Fetching users list from DB
+
 
 $pdo = new PDO(DSN, USER, PASS);
 $query = "SELECT id, username, monster, (SUM(level1) + SUM(level2)) points FROM user GROUP BY id ORDER BY points DESC;";

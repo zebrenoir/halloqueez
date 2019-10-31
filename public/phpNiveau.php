@@ -1,6 +1,10 @@
-// ce fichier permet est la zone données php de la page niveau.php
+
 
 <?php
+//ce fichier permet est la zone données php de la page niveau.php
+
+require_once '../connec2.php';
+
 function hidden1()
 {
     $pdo = new PDO(DSN, USER, PASS);
@@ -10,8 +14,8 @@ function hidden1()
     $results = $statement->fetchAll();
 
     foreach ($results as $result) {
-        if ($result['username'] == 'Dark Nun') {
-            if ($result['level1'] >= 7) {
+        if ($result['username'] == $_SESSION['username']) {
+            if ($result['level1'] <= 10) {
                 return 'style="visibility: hidden;"';
             }
         }
@@ -27,8 +31,8 @@ function hidden2()
     $results = $statement->fetchAll();
 
     foreach ($results as $result) {
-        if ($result['username'] == 'Dark Nun') {
-            if ($result['level2'] >= 7) {
+        if ($result['username'] == $_SESSION['username']) {
+            if ($result['level1'] >= 7) {
                 return 'style="visibility: hidden;"';
             }
         }
@@ -39,7 +43,7 @@ function hidden2()
 
 function hiddenLien1(){
     if(hidden1()==true){
-        return 'href="#"';
+        return 'href="quiz1.php"';
     }
 }
 

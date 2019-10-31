@@ -1,7 +1,7 @@
 <?php
-require_once 'header.html';
+require_once 'header.php';
 require_once '../vendor/autoload.php';
-require_once '../connec.php';
+require_once '../connec2.php';
 
 $pdo = new \PDO(DSN, USER, PASS);
 
@@ -21,7 +21,7 @@ $content = $response->toArray();
 
 
 if (!empty($_POST) && isset($_POST['submit'])) {
-
+    $_SESSION['username'] = $_POST['username'];
     $errors = [];
     $username = $_POST["username"];
     $monster = $_POST["monster"];
@@ -46,7 +46,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
         $blog = $statement->fetchAll();
 
         if(!empty($blog)) {
-            header("location:niveau.php");
+            header("location: public/niveau.php");
         } elseif (empty($blog)){
             $username = $_POST["username"];
             $monster = $_POST["monster"];
@@ -59,17 +59,17 @@ if (!empty($_POST) && isset($_POST['submit'])) {
             //insertion
             $statement->execute();
             $blog = $statement->fetchAll();
-            header("location:niveau.php");
+            header("location: niveau.php");
         }
     }
 }
 ?>
 <body>
-<div class="container-fluid">
+<div class="container-fluid index">
     <h1 class="titleHome">Trick or Game</h1>
     <div class="form">
         <form method="post" action="">
-            <input id="username" name="username" type="text" placeholder="Username" class="form-group">
+            <input id="username" name="username" type="text" placeholder="Username" class="form-group" required>
             <img id="selectImage"/>
             <select class="form-group" id="select" onchange="change();" name="monster">
                 <option>
