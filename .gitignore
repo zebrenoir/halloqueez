@@ -1,5 +1,6 @@
 /vendor/
 .idea/
 .DS_Store
-connec.php
 connec2.php
+connec.php
+
