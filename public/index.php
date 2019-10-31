@@ -21,7 +21,7 @@ $content = $response->toArray();
 
 
 if (!empty($_POST) && isset($_POST['submit'])) {
-    $_SESSION['firstname'] = $_POST['submit'];
+    $_SESSION['username'] = $_POST['username'];
     $errors = [];
     $username = $_POST["username"];
     $monster = $_POST["monster"];
@@ -46,7 +46,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
         $blog = $statement->fetchAll();
 
         if(!empty($blog)) {
-            header("location:niveau.php");
+            header("location: public/niveau.php");
         } elseif (empty($blog)){
             $username = $_POST["username"];
             $monster = $_POST["monster"];
@@ -59,7 +59,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
             //insertion
             $statement->execute();
             $blog = $statement->fetchAll();
-            header("location:niveau.php");
+            header("location: niveau.php");
         }
     }
 }
