@@ -107,7 +107,7 @@ END RANKING PAGE STYLE
 /* --------- HOME / LOGIN PAGE ------------*/
 .titleHome {
     font-family: "Who asks Satan";
-    color: #500100;
+    color: red;
     font-size: 200px;
 }
 
@@ -142,6 +142,7 @@ END RANKING PAGE STYLE
     width: 250px;
     text-align: center;
     font-size: 1.1em;
+    box-shadow: 2px 2px 0px rgba(41, 41, 41, 0.69);
 }
 
 .monster {
