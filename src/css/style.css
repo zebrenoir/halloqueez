@@ -101,7 +101,7 @@ END RANKING PAGE STYLE
     font-size: 200px;
 }
 
-.container-fluid {
+.index{
     background-image: url("/src/image/SAW.jpg");
     background-size: cover;
     background-color: #000000;
@@ -158,3 +158,61 @@ END RANKING PAGE STYLE
     background-color: #2C292F;
 }
 
+/*---------------QUIZ1------------------*/
+
+.quiz1{
+    background-image: url("/src/image/bg_quiz1.jpg");
+    background-size: cover;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.formQuiz{
+    min-width : 500px;
+    min-height: 500px;
+    background-color: black;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+;
+}
+
+audio{
+    align-self: center;
+}
+
+.firstForm{
+    margin: 30px auto;
+}
+
+.form-check{
+    align-self: flex-start;
+    margin-left : 30%;
+}
+
+.form-check-input{
+    position: relative;
+}
+
+.formQuiz button{
+    align-self: center;
+    width: 200px;
+    margin: 30px auto;
+    height: auto;
+}
+
+.titleForm{
+    font-family: 'Who asks Satan', cursive;
+    font-size: 3em;
+    color: #500100;
+}
