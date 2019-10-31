@@ -46,7 +46,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
         $blog = $statement->fetchAll();
 
         if(!empty($blog)) {
-            header("location:/niveau.php");
+            header("location:niveau.php");
         } elseif (empty($blog)){
             $username = $_POST["username"];
             $monster = $_POST["monster"];
@@ -59,18 +59,18 @@ if (!empty($_POST) && isset($_POST['submit'])) {
             //insertion
             $statement->execute();
             $blog = $statement->fetchAll();
-            header("location:/niveau.php");
+            header("location:niveau.php");
         }
     }
 }
 ?>
-
+<body>
 <div class="container-fluid">
     <h1 class="titleHome">Trick or Game</h1>
     <div class="form">
-        <form method="post" action="#">
+        <form method="post" action="">
             <input id="username" name="username" type="text" placeholder="Username" class="form-group">
-            <img id="selectImage"style="width : 100px; height : 100px"/>
+            <img id="selectImage"/>
             <select class="form-group" id="select" onchange="change();" name="monster">
                 <option>
                     Choose your monster...
