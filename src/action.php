@@ -1,6 +1,6 @@
 <?php
 
-require_once 'connec2.php';
+require_once '../connec2.php';
 $step = 1;
 $goodAnswer = 0;
 
