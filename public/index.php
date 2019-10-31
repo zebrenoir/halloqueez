@@ -1,7 +1,7 @@
 <?php
 require_once 'header.html';
 require_once '../vendor/autoload.php';
-require_once '../connec.php';
+require_once '../connec2.php';
 
 $pdo = new \PDO(DSN, USER, PASS);
 

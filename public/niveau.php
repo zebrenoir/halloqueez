@@ -1,7 +1,7 @@
 <?php require_once "header.html"?>
 <?php
 
-require_once "../connec.php";
+require_once "../connec2.php";
 require_once "phpNiveau.php";
 ?>
 
