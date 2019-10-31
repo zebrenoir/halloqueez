@@ -63,13 +63,13 @@ var_dump($goodAnswer);
             <p>Who is the director of this movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q2" id="q2-a1">
             <label class="form-check-label" for="q2-a1">
                 <?= $content['movies'][77]['director'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q2" id="q2-a2">
             <label class="form-check-label" for="q2-a2">
                 <?= $content['movies'][1]['director'] ?>
             </label>
@@ -81,7 +81,7 @@ var_dump($goodAnswer);
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q2" id="q2-a4">
             <label class="form-check-label" for="q2-a4">
                 <?= $content['movies'][13]['director'] ?>
             </label>
@@ -95,26 +95,25 @@ var_dump($goodAnswer);
             <p>What is the country of production of this movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q3" id="q3-a1">
             <label class="form-check-label" for="q3-a1">
                 <?= $content['movies'][73]['country'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q" id="q3-a2" value="<?= $content['movies'][80]['country'] ?>">
             <label class="form-check-label" for="q3-a2">
                 <?= $content['movies'][80]['country'] ?>
-                <!--                good-->
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q3" id="q3-a3">
             <label class="form-check-label" for="q3-a3">
                 <?= $content['movies'][70]['country'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q3" id="q3-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q3" id="q3-a4">
             <label class="form-check-label" for="q3-a4">
                 <?= $content['movies'][53]['country'] ?>
             </label>
@@ -129,28 +128,27 @@ var_dump($goodAnswer);
             <p>Movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q4" id="q4-a1">
             <label class="form-check-label" for="q4-a1">
                 <?= $content['movies'][31]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q4" id="q4-a2">
             <label class="form-check-label" for="q4-a2">
                 <?= $content['movies'][2]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q4" id="q4-a3">
             <label class="form-check-label" for="q4-a3">
                 <?= $content['movies'][44]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q4" id="q4-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q" id="q4-a4" value="<?= $content['movies'][65]['title'] ?>">
             <label class="form-check-label" for="q4-a4">
                 <?= $content['movies'][65]['title'] ?>
-                <!--                good-->
             </label>
         </div>
     <?php } ?>
@@ -162,26 +160,25 @@ var_dump($goodAnswer);
             <p>Movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q5" id="q5-a1">
             <label class="form-check-label" for="q5-a1">
                 <?= $content['movies'][19]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q" id="q5-a2" value="<?= $content['movies'][66]['title'] ?>">
             <label class="form-check-label" for="q5-a2">
                 <?= $content['movies'][66]['title'] ?>
-                <!--                good-->
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q5" id="q5-a3">
             <label class="form-check-label" for="q5-a3">
                 <?= $content['movies'][65]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q5" id="q5-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q5" id="q5-a4">
             <label class="form-check-label" for="q5-a4">
                 <?= $content['movies'][1]['title'] ?>
             </label>
@@ -253,29 +250,28 @@ var_dump($goodAnswer);
             <p>Movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q8" id="q8-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q8" id="q8-a1">
             <label class="form-check-label" for="q8-a1">
                 <?= $content['movies'][47]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q8" id="q8-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q8" id="q8-a2">
             <label class="form-check-label" for="q8-a2">
                 <?= $content['movies'][4]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q8" id="q8-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q8" id="q8-a3">
             <label class="form-check-label" for="q8-a3">
                 <?= $content['movies'][10]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q8" id="q8-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q" id="q8-a4" value="<?= $content['movies'][42]['title'] ?>">
             <label class="form-check-label" for="q8-a4">
                 <?= $content['movies'][42]['title'] ?>
             </label>
-            <!--            good-->
         </div>
     <?php } ?>
     <?php if ($step == 9) { ?>
@@ -286,26 +282,25 @@ var_dump($goodAnswer);
             <p>Movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q9" id="q9-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q" id="q9-a1" value="<?= $content['movies'][74]['title'] ?>">
             <label class="form-check-label" for="q9-a1">
                 <?= $content['movies'][74]['title'] ?>
-                <!--                good-->
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q9" id="q9-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q9" id="q9-a2">
             <label class="form-check-label" for="q9-a2">
                 <?= $content['movies'][49]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q9" id="q9-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q9" id="q9-a3">
             <label class="form-check-label" for="q9-a3">
                 <?= $content['movies'][20]['title'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q9" id="q9-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q9" id="q9-a4">
             <label class="form-check-label" for="q9-a4">
                 <?= $content['movies'][11]['title'] ?>
             </label>
