@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Who asks Satan";
+    src: url("../fonts/who_asks_satan.ttf") format("truetype");
+}
+
 /* partie des niveaux********************************/
 
 .body_niveau{
@@ -91,8 +96,9 @@ END RANKING PAGE STYLE
 
 /* --------- HOME / LOGIN PAGE ------------*/
 .titleHome {
+    font-family: "Who asks Satan";
     color: #500100;
-    font-size: 150px;
+    font-size: 200px;
 }
 
 .container-fluid {
@@ -120,7 +126,8 @@ END RANKING PAGE STYLE
     background-color: #070707;
     border: #070707 solid 2px;
     border-radius: 5px;
-    margin-bottom: 3rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
     height: 50px;
     width : 250px;
     text-align: center;
@@ -135,9 +142,19 @@ END RANKING PAGE STYLE
     font-size: 2em;
 }
 
+#selectImage{
+    width : 250px;
+    height : 376px;
+    border: solid black 5px;
+    background-image:url("/../src/image/death-164761.jpg") ;
+    background-position: top;
+    background-size: cover;
+}
+
 .btn-secondary{
     width: 200px;
     height: 50px;
     font-size: 1.1em;
     background-color: #2C292F;
 }
+
