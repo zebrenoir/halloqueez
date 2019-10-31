@@ -1,22 +1,40 @@
 <?php
-    require_once 'header.html';
-    require_once '../connec.php';
-    require_once '../vendor/autoload.php';
+require_once 'header.html';
+require_once '../connec2.php';
+require_once '../vendor/autoload.php';
+
+use Symfony\Component\HttpClient\HttpClient;
+
+// Fetching users list from DB
 
 $pdo = new PDO(DSN, USER, PASS);
 $query = "SELECT id, username, monster, (SUM(level1) + SUM(level2)) points FROM user GROUP BY id ORDER BY points DESC;";
 $statement = $pdo->query($query);
-$users = $statement->fetchAll();
+$users = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-use Symfony\Component\HttpClient\HttpClient;
+// Fetching monsters info from API
 
 $client = HttpClient::create();
-$response = $client->request('GET', 'https://hackathon-wild-hackoween.herokuapp.com/movies');
+$response = $client->request('GET', 'https://hackathon-wild-hackoween.herokuapp.com/monsters');
+$monsters = $response->toArray();
+$monsters = $monsters['monsters'];
+$monstersNames = [];
 
-$content = $response->toArray();
-// $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-//var_dump($content);
+// Replacing monsters name by image URL
+
+foreach ($monsters as $monster) {
+    $monstersNames[] = $monster['name'];
+}
+
+$newUsers = $users;
+foreach ($users as $key => $user) {
+    $monsterId = array_search($user['monster'], $monstersNames);
+    $newUsers[$key]['monster'] = $monsters[$monsterId]['picture'];
+}
+
 ?>
+
+<body class="ranking-body">
 
 
 <div class="ranking">
@@ -36,8 +54,9 @@ $content = $response->toArray();
             </thead>
             <tbody>
             <?php
+
             $rank = 1;
-            foreach ($users as $user) {
+            foreach ($newUsers as $user) {
 
                 $points = $user['level1'] + $user['level2'];
                 ?>
@@ -50,7 +69,8 @@ $content = $response->toArray();
 
                 <?php
                 $rank += 1;
-            } ?>
+            }
+            ?>
 
             </tbody>
         </table>
@@ -61,6 +81,8 @@ $content = $response->toArray();
 </div>
 
 <script src="https://use.fontawesome.com/236586708f.js"></script>
+
+</body>
 
 <?php
 require_once 'footer.html';
