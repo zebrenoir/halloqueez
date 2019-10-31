@@ -5,8 +5,8 @@
 
 /* partie des niveaux********************************/
 
-.body_niveau{
-    background-image:url("/src/image/death-164761.jpg") ;
+.body_niveau {
+    background-image: url("/src/image/death-164761.jpg");
     background-attachment: fixed;
     background-repeat: no-reapet !important;
     background-position: top !important;
@@ -15,42 +15,45 @@
 
 .title_pageNiveau {
     font-family: 'Indie Flower', cursive;
-    color:white;
+    color: white;
 }
 
-.levels{
+.levels {
     display: flex;
 }
 
-.lvl{
+.lvl {
     display: flex;
     flex-direction: row;
     margin-right: 20%;
-    background:transparent;
-    border-radius:50%;
-    width:110px;
-    height:110px;
-    border:2px solid white;
+    background: transparent;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    border: 2px solid white;
     color: white;
     border-right-width: 34px;
     font-family: "Who asks Satan";
     font-size: 4em;
 }
-.number{
+
+.number {
 
     margin-left: 22px;
 }
-.lock{
+
+.lock {
     height: 25px;
-    width:25px ;
+    width: 25px;
     margin-left: 30px;
     margin-top: 35px;
 }
 
-.number{
-    text-decoration:none;
-    color:white;
+.number {
+    text-decoration: none;
+    color: white;
 }
+
 /*** fin de la partier page niveau**/
 
 
@@ -101,7 +104,7 @@ END RANKING PAGE STYLE
     font-size: 200px;
 }
 
-.index{
+.index {
     background-image: url("/src/image/SAW.jpg");
     background-size: cover;
     background-color: #000000;
@@ -129,29 +132,29 @@ END RANKING PAGE STYLE
     margin-bottom: 20px;
     margin-top: 20px;
     height: 50px;
-    width : 250px;
+    width: 250px;
     text-align: center;
     font-size: 1.1em;
 }
 
-.monster{
+.monster {
     padding-bottom: 202px;
 }
 
-#username{
+#username {
     font-size: 2em;
 }
 
-#selectImage{
-    width : 250px;
-    height : 376px;
+#selectImage {
+    width: 250px;
+    height: 376px;
     border: solid black 5px;
-    background-image:url("/../src/image/death-164761.jpg") ;
+    background-image: url("/../src/image/death-164761.jpg");
     background-position: top;
     background-size: cover;
 }
 
-.btn-secondary{
+.btn-secondary {
     width: 200px;
     height: 50px;
     font-size: 1.1em;
@@ -160,7 +163,7 @@ END RANKING PAGE STYLE
 
 /*---------------QUIZ1------------------*/
 
-.quiz1{
+.quiz1 {
     background-image: url("/src/image/bg_quiz1.jpg");
     background-size: cover;
     background-color: #000000;
@@ -175,44 +178,43 @@ END RANKING PAGE STYLE
     justify-content: center;
 }
 
-.formQuiz{
-    min-width : 500px;
-    min-height: 500px;
-    background-color: black;
+.btnRadio {
     align-self: center;
+    margin: 30px auto ;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.70);
+    font-size: 1.2em;
+    color: honeydew;
+}
+
+.form-check-label {
+margin-left: 20px;
+}
+
+.form-check {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 2em;
-;
 }
 
-audio{
-    align-self: center;
-}
-
-.firstForm{
-    margin: 30px auto;
-}
-
-.form-check{
-    align-self: flex-start;
-    margin-left : 30%;
-}
-
-.form-check-input{
+.form-check-input {
     position: relative;
+    align-self: flex-start;
 }
 
-.formQuiz button{
+.formQuiz button {
     align-self: center;
     width: 200px;
     margin: 30px auto;
     height: auto;
 }
 
-.titleForm{
+.titleForm {
     font-family: 'Who asks Satan', cursive;
-    font-size: 3em;
-    color: #500100;
+    font-size: 3.2em;
+    color: red;
+}
+
+/*--------------------NAVBAR------------------------------*/
+
+.pos-f-t {
+    position: absolute;
 }
