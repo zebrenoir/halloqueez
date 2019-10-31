@@ -180,7 +180,7 @@ END RANKING PAGE STYLE
 
 .btnRadio {
     align-self: center;
-    margin: 30px auto ;
+    margin: 30px auto;
     width: 150px;
     background-color: rgba(0, 0, 0, 0.70);
     font-size: 1.2em;
@@ -188,7 +188,7 @@ END RANKING PAGE STYLE
 }
 
 .form-check-label {
-margin-left: 20px;
+    margin-left: 20px;
 }
 
 .form-check {
@@ -211,6 +211,10 @@ margin-left: 20px;
     font-family: 'Who asks Satan', cursive;
     font-size: 3.2em;
     color: red;
+    background-color: rgba(0, 0, 0, 0.70);
+    width: 600px;
+    margin: auto;
+    border-radius: 10px;
 }
 
 /*--------------------NAVBAR------------------------------*/
