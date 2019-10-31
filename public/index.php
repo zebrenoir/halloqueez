@@ -1,5 +1,5 @@
 <?php
-require_once 'header.html';
+require_once 'header.php';
 require_once '../vendor/autoload.php';
 require_once '../connec2.php';
 
@@ -21,7 +21,7 @@ $content = $response->toArray();
 
 
 if (!empty($_POST) && isset($_POST['submit'])) {
-
+    $_SESSION['firstname'] = $_POST['submit'];
     $errors = [];
     $username = $_POST["username"];
     $monster = $_POST["monster"];
@@ -46,7 +46,7 @@ if (!empty($_POST) && isset($_POST['submit'])) {
         $blog = $statement->fetchAll();
 
         if(!empty($blog)) {
-            header("location:/niveau.php");
+            header("location:niveau.php");
         } elseif (empty($blog)){
             $username = $_POST["username"];
             $monster = $_POST["monster"];
@@ -63,15 +63,14 @@ if (!empty($_POST) && isset($_POST['submit'])) {
         }
     }
 }
-
 ?>
 
 <div class="container-fluid">
     <h1 class="titleHome">Trick or Game</h1>
     <div class="form">
-        <form method="post" action="niveau.php">
-            <input id="username" name="username" type="text" placeholder="Username" class="form-group">
-            <img id="selectImage"style="width : 100px; height : 100px"/>
+        <form method="post" action="">
+            <input id="username" name="username" type="text" placeholder="Username" class="form-group" required>
+            <img id="selectImage"/>
             <select class="form-group" id="select" onchange="change();" name="monster">
                 <option>
                     Choose your monster...

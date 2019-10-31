@@ -1,4 +1,4 @@
-<?php require_once "header.html"?>
+<?php require_once "header.php" ?>
 <?php
 
 require_once "../connec2.php";
