@@ -1,6 +1,7 @@
 <?php
 
 require_once 'header.php';
+require 'navbar.php';
 require_once '../connec2.php';
 require_once '../vendor/autoload.php';
 
