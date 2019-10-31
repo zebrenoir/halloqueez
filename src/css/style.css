@@ -41,8 +41,6 @@
     margin-top: 300px;
 }
 
-
-
 .number {
 
     margin-left: 22px;
@@ -229,6 +227,10 @@ END RANKING PAGE STYLE
     width: 600px;
     margin: auto;
     border-radius: 10px;
+}
+
+.greg {
+    width: 200px;
 }
 
 /*--------------------NAVBAR------------------------------*/
