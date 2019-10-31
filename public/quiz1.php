@@ -19,7 +19,7 @@ $content = $response->getContent();
 // $content = '{"id":521583, "name":"symfony-docs", ...}'
 $content = $response->toArray();
 // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-
+var_dump($goodAnswer);
 ?>
 
 <form method="post">
@@ -31,26 +31,25 @@ $content = $response->toArray();
             <p>What is the release year of this movie ?</p>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q" id="q1-a1" value="<?= $content['movies'][3]['year'] ?>">
             <label class="form-check-label" for="q1-a1">
                 <?= $content['movies'][3]['year'] ?>
-                <!--            good-->
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q1" id="q1-a2">
             <label class="form-check-label" for="q1-a2">
                 <?= $content['movies'][79]['year'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q1" id="q1-a3">
             <label class="form-check-label" for="q1-a3">
                 <?= $content['movies'][33]['year'] ?>
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" id="q1-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q1" id="q1-a4">
             <label class="form-check-label" for="q1-a4">
                 <?= $content['movies'][77]['year'] ?>
             </label>
@@ -76,10 +75,9 @@ $content = $response->toArray();
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" id="q2-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q" id="q2-a3" value="<?= $content['movies'][67]['director'] ?>">
             <label class="form-check-label" for="q2-a3">
                 <?= $content['movies'][67]['director'] ?>
-                <!--                good-->
             </label>
         </div>
         <div class="form-check">
@@ -344,6 +342,7 @@ $content = $response->toArray();
     <?php } ?>
 
     <input type='hidden' name="step" value="<?= $step ?>"/>
+    <input type="hidden" name="goodAnswer" value="<?= $goodAnswer ?>"/>
 
     <button type="submit" class="btn btn-primary">Next</button>
 </form>
