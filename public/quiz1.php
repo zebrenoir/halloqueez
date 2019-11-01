@@ -132,13 +132,13 @@ $content = $response->toArray();
 <?php } ?>
 <?php if ($step == 4) { ?>
     <div class="firstForm">
-        <audio src="../src/sound1.mp3" controls>
+        <audio src="../src/sound1.mp3" autoplay controls>
             Your browser does not support the
             <code>audio</code> element.
         </audio>
     </div>
     <div>
-        <p class="titleForm">Movie ?</p>
+        <p class="titleForm">What is the title ?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -172,7 +172,7 @@ $content = $response->toArray();
         <img src="http://giphygifs.s3.amazonaws.com/media/mphIpEZf54wko/giphy.gif" alt="">
     </div>
     <div>
-        <p class="titleForm">Movie ?</p>
+        <p class="titleForm">What is the title ?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -272,10 +272,10 @@ $content = $response->toArray();
 <?php } ?>
 <?php if ($step == 8) { ?>
     <div class="firstForm">
-        <audio controls src="../src/sound2.mp3"></audio>
+        <audio controls src="../src/sound2.mp3" autoplay></audio>
     </div>
     <div>
-        <p class="titleForm">Movie ?</p>
+        <p class="titleForm">What is the title ?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -309,7 +309,7 @@ $content = $response->toArray();
         <img src="https://media.giphy.com/media/JfNbCyMCB4txu/giphy.gif" alt="">
     </div>
     <div>
-        <p class="titleForm">Movie ?</p>
+        <p class="titleForm">What is the title ?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
@@ -340,34 +340,34 @@ $content = $response->toArray();
 <?php } ?>
 <?php if ($step == 10) { ?>
     <div class="firstForm">
-
+        <img class="greg" src="../src/image/greg.jpg" alt="">
     </div>
     <div>
-        <p class="titleForm">Question 10</p>
+        <p class="titleForm">In which fashion horror movie can we see this french character?</p>
     </div>
     <div class="btnRadio">
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q10" id="q10-a1" value="option1">
+            <input class="form-check-input" type="radio" name="q" id="q10-a1" value="Never wear shorts with shirts">
             <label class="form-check-label" for="q10-a1">
-                Option 1
+                Never wear shorts with shirts
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q10" id="q10-a2" value="option2">
+            <input class="form-check-input" type="radio" name="q" id="q10-a2" value="The devil wears Prada shorts">
             <label class="form-check-label" for="q10-a2">
-                Option 2
+                The devil wears Prada shorts
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q10" id="q10-a3" value="option3">
+            <input class="form-check-input" type="radio" name="q" id="q10-a3" value="Greg II : The Comeback">
             <label class="form-check-label" for="q10-a3">
-                Option 3
+                Greg II : The Comeback
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="q10" id="q10-a4" value="option4">
+            <input class="form-check-input" type="radio" name="q" id="q10-a4" value="Fashion murder victims">
             <label class="form-check-label" for="q10-a4">
-                Option 4
+                Fashion murder victims
             </label>
         </div>
     </div>
