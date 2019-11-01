@@ -66,7 +66,53 @@ if (!empty($_POST) && isset($_POST['submit'])) {
 ?>
 <body>
 <div class="container-fluid index">
-    <h1 class="titleHome">Trick or Game</h1>
+    <div class="wrapper titleHome">
+        <p class="glitch">
+            <span>T</span>
+            <span>r</span>
+            <span>i</span>
+            <span>c</span>
+            <span>k</span>
+            <span>.</span>
+            <span>o</span>
+            <span>r</span>
+            <span>.</span>
+            <span>G</span>
+            <span>a</span>
+            <span>m</span>
+            <span>e</span>
+        </p>
+        <p class="glitch_fixed">
+            <span>T</span>
+            <span>r</span>
+            <span>i</span>
+            <span>c</span>
+            <span>k</span>
+            <span>.</span>
+            <span>o</span>
+            <span>r</span>
+            <span>.</span>
+            <span>G</span>
+            <span>a</span>
+            <span>m</span>
+            <span>e</span>
+        </p>
+        <p class="glitch_opacity">
+            <span>T</span>
+            <span>r</span>
+            <span>i</span>
+            <span>c</span>
+            <span>k</span>
+            <span>.</span>
+            <span>o</span>
+            <span>r</span>
+            <span>.</span>
+            <span>G</span>
+            <span>a</span>
+            <span>m</span>
+            <span>e</span>
+        </p>
+    </div>
     <div class="form">
         <form method="post" action="">
             <input id="username" name="username" type="text" placeholder="Username" class="form-group" required>
